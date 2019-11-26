@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Nos livres
+{% endblock %}
+
+
+{% block categorie %}
+    <a href="{{ path ('book', {id : book.id}) }}"
+{% endblock  %}
+
+
+
+{% block content %}
+
+        <ul>
+    {% for book in books-list %}
+            <li>
+                "{{ book.titre }}"
+                par {{ book.auteur.lastname}}
+                {{ book.auteur.name}}
+            </li>
+    {% endfor %}
+        </ul>
+
+{% endblock %

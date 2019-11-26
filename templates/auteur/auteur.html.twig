@@ -1,0 +1,35 @@
+    <!doctype html>
+    <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport"
+                  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>ma liste auteur</title>
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <body>
+    <h1 id="title">Voici la liste de mes auteurs</h1>
+    {% for auteur in auteurList %}
+        <a class="grille">
+            <div id="bloc">
+                <a href="{{ path ('auteur_id', {'id': auteur.id}) }}">
+
+                <strong>{{ auteur.name }} {{ auteur.firstName }}</strong></a>
+
+            </div>
+
+            <div id="bloc">
+                {{ auteur.birthDate|date("d/ m/ Y") }}
+            </div>
+            <div id="bloc">
+                {{ auteur.deathDate|date("d/ m/ Y") }}
+            </div>
+                <div id="bloc">
+                    {{ auteur.biography }}
+
+        </div>
+    </div>
+    {% endfor %}
+
+    </body>
+</html>

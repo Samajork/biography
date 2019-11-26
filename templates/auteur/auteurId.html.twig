@@ -1,0 +1,22 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block categorie %}
+    des auteurs
+{% endblock  %}
+
+
+
+{% block content %}
+    <article class="preview">
+
+        <h2>{{ auteur.firstName }} {{ auteur.name }}</h2>
+        <p>né le {{ auteur.birthDate|date("d/m/Y")}}
+            {% if auteur.deathDate is not null %}
+                et mort le {{ auteur.deathDate|date("d/m/Y") }}{% endif %}</p>
+        <p>Biographie {{ auteur.biography}}</p>
+    </article>
+{% endblock %}

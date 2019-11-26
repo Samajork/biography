@@ -1,0 +1,23 @@
+body {
+    background-color: dodgerblue;
+    font-family: ".SF NS Display";
+    margin: 0;
+    Padding: 30;
+}
+
+article {
+    border:1px blueviolet;
+    text-transform: lowercase;
+    font: 28 px;
+}
+.grille {
+    background-color: #718C00;
+    display:grid;
+    grid-template-columns: 200px 400px 200px;
+    grid-gap: 10px;
+}
+.bloc {
+    background-color: #916319;
+    border: 1px black;
+    padding: 20px;
+}

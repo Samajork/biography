@@ -1,0 +1,19 @@
+body {
+    font-family: Arial;
+    background-color: #718C00;
+    margin: 30px;
+    Padding: 25px;
+}
+
+.grille {
+    background-color: #718C00;
+    display:grid;
+    grid-template-columns: 200px 400px 200px;
+    grid-gap: 10px;
+}
+.bloc {
+    background-color: #916319;
+    border: 1px black;
+    padding: 20px;
+}
+
